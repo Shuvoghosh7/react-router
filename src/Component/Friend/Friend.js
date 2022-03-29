@@ -1,17 +1,17 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Friend = (props) => {
-    console.log(props)
     const{name,username,id}=props.friend
     let navigate = useNavigate()
     const ShowFriendDetails =()=>{
-       const path= `Friend/${id}`
+       const path= `/friend/ ${id}`
        navigate(path)
     }
     return (
         <div>
             <p>Name:{name}</p>
+            <Link to={'/friend/'+id}>Click</Link>
             <button onClick={ShowFriendDetails}>{username} id:{id}</button>
         </div>
     );
