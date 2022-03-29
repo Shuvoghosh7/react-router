@@ -5,18 +5,18 @@ import Home from './Component/Home/Home';
 import About from './Component/About/About';
 import NotFound from './Component/NotFound/NotFound';
 import Friends from './Component/Friends/Friends';
+import Headder from './Component/Headder/Headder';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Use Routes</h1>
+  
+      <Headder/>
      <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Friends" element={<Friends/>} />
-        
-        <Route path="/About" element={<About />} />
+        <Route path="/friends" element={<Friends/>} />
+        <Route path="/about" element={<About />} />
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
     </div>
